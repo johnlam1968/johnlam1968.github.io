@@ -38,7 +38,7 @@
             }
 
             // Construct the URL using Math.round() for the coordinates
-            const url = `${BASE_URL}${Math.round(userLongitude * 1000) / 1000}/${Math.round(userLatitude * 1000) / 1000}/${_radius}`;
+            const url = `${BASE_URL}${Math.round(userLatitude * 1000) / 1000}/${Math.round(userLongitude * 1000) / 1000}/${_radius}`;
             
             statusElement.textContent = `Tracking location: Lat ${userLatitude.toFixed(3)}, Lon ${userLongitude.toFixed(3)}`;
 
