@@ -37,7 +37,7 @@
                 return;
             }
 
-            const url = '${BASE_URL}${userLatitude.toFixed(3)}/${userLongitude.toFixed(3)}/${_radius}';
+            const url = `${BASE_URL}${userLatitude.toFixed(3)}/${userLongitude.toFixed(3)}/${_radius}`;
             
             statusElement.textContent = `Tracking location: Lat ${userLatitude.toFixed(3)}, Lon ${userLongitude.toFixed(3)}`;
 
