@@ -30,7 +30,7 @@
         const statusElement = document.getElementById('status');
         const outputElement = document.getElementById('output');
 
-        // --- Core Data Processing Function (The equivalent of _update) ---
+        // --- Core Data Processing Function ---
         async function fetchAndProcessPlanes() {
             if (userLatitude === null || userLongitude === null) {
                 outputElement.textContent = "Location not yet determined.";
@@ -55,7 +55,7 @@
                     return;
                 }
 
-                // --- Filtering and Processing (Replacing pandas/Python logic) ---
+                // --- Filtering and Processing ---
                 
                 let air_borne = aircraftList
                     .filter(ac => {
@@ -128,7 +128,7 @@
             }
         }
 
-        // --- Geolocation Functions (The equivalent of reading sys.argv) ---
+        // --- Geolocation Functions ---
         function startTracking(position) {
             userLatitude = position.coords.latitude;
             userLongitude = position.coords.longitude;
@@ -136,7 +136,7 @@
             // Initial run
             fetchAndProcessPlanes(); 
             
-            // Set up the automatic update loop (equivalent of the while loop)
+            // Set up the automatic update loop
             if (updateTimer === null) {
                  updateTimer = setInterval(fetchAndProcessPlanes, UPDATE_INTERVAL_MS);
             }
